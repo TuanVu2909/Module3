@@ -1,27 +1,25 @@
-package Date29_05.model;
-
-import java.time.LocalDateTime;
+package product_category.model;
 
 public class Product {
-    private Long id;
+    Long id;
     String name;
     double price;
-    LocalDateTime dateTime;
+    int quantity;
     Category category;
 
-    public Product(Long id, String name, double price, LocalDateTime dateTime, Category category) {
+    public Product(Long id, String name, double price, int quantity, Category category) {
         this.id = id;
         this.name = name;
         this.price = price;
-        this.dateTime = dateTime;
+        this.quantity = quantity;
         this.category = category;
     }
 
-    public Product(Long id, String name, double price, LocalDateTime dateTime) {
-        this.id = id;
+    public Product(String name, double price, int quantity, Category category) {
         this.name = name;
         this.price = price;
-        this.dateTime = dateTime;
+        this.quantity = quantity;
+        this.category = category;
     }
 
     public Long getId() {
@@ -48,12 +46,12 @@ public class Product {
         this.price = price;
     }
 
-    public LocalDateTime getDateTime() {
-        return dateTime;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setDateTime(LocalDateTime dateTime) {
-        this.dateTime = dateTime;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public Category getCategory() {

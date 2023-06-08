@@ -1,11 +1,15 @@
-package Date29_05.model;
+package product_category.model;
 
 public class Category {
-    private Long id;
-    private String name;
+    Long id;
+    String name;
 
     public Category(Long id, String name) {
         this.id = id;
+        this.name = name;
+    }
+
+    public Category(String name) {
         this.name = name;
     }
 
